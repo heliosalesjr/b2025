@@ -4,6 +4,8 @@ import Link from "next/link"
 import PageApresentacao1 from "./content/PageApresentacao1"
 import PageApresentacao2 from "./content/PageApresentacao2"
 import PageApresentacao3 from "./content/PageApresentacao3"
+import PageApresentacao4 from "./content/PageApresentacao4"
+import PageApresentacao5 from "./content/PageApresentacao5"
 
 export default function ContentSection() {
   return (
@@ -15,8 +17,11 @@ export default function ContentSection() {
 
           {/* Second and Third Components - Side by side */}
           <PageApresentacao2 />
+          <PageApresentacao4 />
+          
+          <PageApresentacao5 />
 
-          <PageApresentacao3 />
+         
           {/* Next Page Button */}
           <div className="flex justify-center mt-8">
             <Button asChild>

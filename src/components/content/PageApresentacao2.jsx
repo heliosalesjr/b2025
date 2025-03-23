@@ -3,13 +3,13 @@ import Image from 'next/image'
 
 const PageApresentacao2 = () => {
   return (
-    <div className="rounded-lg bg-white p-6 shadow-md">
+    <div className="rounded-lg bg-white p-6 shadow-2xl">
             <div className="grid gap-6 md:grid-cols-2">
             <div className="flex items-center justify-center">
                 <Image
                   src="/profa_ilustra.png"
                   alt="Imagem ilustrativa"
-                  width={400}
+                  width={500}
                   height={200}
                   className="rounded-md object-cover"
                 />

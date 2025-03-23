@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const PageApresentacao1 = () => {
   return (
-    <div className="rounded-lg bg-white p-6 shadow-md">
+    <div className="rounded-lg bg-white p-6 shadow-2xl">
             <div className="grid gap-6 md:grid-cols-2">
               <div className="space-y-4">
                 <h2 className="text-2xl font-bold pt-4">APRESENTAÇÃO DO CURSO</h2>
