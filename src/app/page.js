@@ -1,5 +1,5 @@
-import Navbar from "@/components/navbar"
-import Hero from "@/components/hero"
+import Navbar from "@/components/Navbar"
+import Hero from "@/components/Hero"
 import ContentSection from "@/components/ContentSection"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
