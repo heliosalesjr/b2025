@@ -9,11 +9,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navLinks = [
-    { name: "Apresentação", href: "/page1" },
-    { name: "Objetivos", href: "/page2" },
-    { name: "Metodologias Ativas", href: "/page3" },
-    { name: "Projeto", href: "/page4" },
-    { name: "Referências", href: "/page5" },
+    { name: "Apresentação", href: "/" },
+    { name: "Módulo 1", href: "/modulo1" },
+    { name: "Módulo 2", href: "/modulo2" },
+    { name: "Módulo 3", href: "/modulo3" },
+    { name: "Módulo 4", href: "/modulo4" },
   ]
 
   return (

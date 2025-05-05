@@ -42,7 +42,7 @@ export default function CourseStructure() {
         <h2 className="mb-4 text-4xl text-center font-bold">Estrutura do Curso</h2>
         <Accordion type="single" collapsible className="w-ful mx-4">
           {modules.map((module, index) => (
-            <AccordionItem key={index} value={`module-${index}`}>
+            <AccordionItem key={index} value={`module-${index}`} className="text-2xl">
               <AccordionTrigger>{module.title}</AccordionTrigger>
               <AccordionContent>
                 <ul className="list-disc pl-4 space-y-2">

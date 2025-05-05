@@ -1,22 +1,19 @@
 import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
-import ContentSection from "@/components/ContentSection"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
 
-export default function Home() {
+export default function Modulo4() {
   return (
     <div className="flex min-h-screen flex-col">
       <Navbar />
       <ProgressBar />
       <main >
-      <Hero
-          title="CURSO DE FORMAÇÃO"
-          subtitle="COLEÇÃO APRENDENDO A LIDAR COM DINHEIRO - BEĨ EDUCAÇÃO"
-          buttonText="Comece Agora"
-          buttonHref="#content"
-        />
-        <ContentSection />
+        <Hero
+                title="Módulo 4"
+                subtitle="Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e a metodologia de aplicação do material"
+                />
+        <h1>Módulo 4</h1>
       </main>
       <Footer />
     </div>
