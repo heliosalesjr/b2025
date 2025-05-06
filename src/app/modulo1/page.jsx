@@ -2,6 +2,10 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
+import Modulo1Intro from "@/components/content/Modulo1Intro"
+import Modulo1Objetivos from "@/components/content/Modulo1Objetivos"
+import Modulo1Situacao from "@/components/content/Modulo1Situacao"
+import Modulo1TextBlock from "@/components/content/Modulo1TextBlock"
 
 export default function Modulo1() {
   return (
@@ -13,7 +17,12 @@ export default function Modulo1() {
         title="Módulo 1"
         subtitle="Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e a metodologia de aplicação do material"
         />
-        <h1>Módulo 1</h1>
+        <Modulo1Intro />
+        <Modulo1Objetivos />
+        <Modulo1Situacao />
+        <Modulo1TextBlock />
+
+
       </main>
       <Footer />
     </div>
