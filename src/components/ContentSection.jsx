@@ -25,7 +25,7 @@ export default function ContentSection() {
           {/* Next Page Button */}
           <div className="flex justify-center mt-8">
             <Button asChild>
-              <Link href="/page1">Próxima Página</Link>
+              <Link href="/modulo1">Próxima Página: O Módulo 1</Link>
             </Button>
           </div>
         </div>

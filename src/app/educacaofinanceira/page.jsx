@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
+import EFContentSection from "@/components/EFContentSection"
 
 export default function Modulo2() {
   return (
@@ -14,6 +15,7 @@ export default function Modulo2() {
                 subtitle="Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e a metodologia de aplicação do material"
                 />
         <h1>Módulo 2</h1>
+        <EFContentSection />
       </main>
       <Footer />
     </div>
