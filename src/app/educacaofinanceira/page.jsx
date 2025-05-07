@@ -10,7 +10,7 @@ export default function Modulo2() {
       <ProgressBar />
       <main >
         <Hero
-                title="Módulo 2"
+                title="Educação Financeira"
                 subtitle="Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e a metodologia de aplicação do material"
                 />
         <h1>Módulo 2</h1>

@@ -11,7 +11,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Apresentação", href: "/" },
     { name: "Módulo 1", href: "/modulo1" },
-    { name: "Módulo 2", href: "/modulo2" },
+    { name: "Educação Financeira", href: "/educacaofinanceira" },
     { name: "Módulo 3", href: "/modulo3" },
     { name: "Módulo 4", href: "/modulo4" },
   ]
