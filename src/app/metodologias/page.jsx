@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
+import MetContentSection from "@/components/MetContentSection"
 
 export default function Metodologias() {
   return (
@@ -13,7 +14,7 @@ export default function Metodologias() {
                 title="Metodologias"
                 subtitle="Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e a metodologia de aplicação do material"
                 />
-        <h1>Módulo 3</h1>
+        <MetContentSection />
       </main>
       <Footer />
     </div>
