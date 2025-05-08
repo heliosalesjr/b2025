@@ -17,7 +17,7 @@ export default function EFContentSection() {
             {/* Next Page Button */}
             <div className="flex justify-center mt-8">
               <Button asChild>
-                <Link href="/modulo1">Próxima Página: Metodologias</Link>
+                <Link href="/metodologias">Próxima Página: Metodologias</Link>
               </Button>
             </div>
           </div>
