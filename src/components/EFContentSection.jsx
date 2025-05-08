@@ -4,6 +4,7 @@ import EFIntro from "./content/EFIntro"
 import EF2 from "./content/EF2"
 import EF3 from "./content/EF3"
 import EF4 from "./content/EF4"
+import EF5 from "./content/EF5"
 
 export default function EFContentSection() {
     return (
@@ -14,6 +15,7 @@ export default function EFContentSection() {
             <EF2 />
             <EF3 />
             <EF4 />
+            <EF5 />
             {/* Next Page Button */}
             <div className="flex justify-center mt-8">
               <Button asChild>
