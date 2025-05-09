@@ -13,7 +13,7 @@ export default function Navbar() {
     { name: "Módulo 1", href: "/modulo1" },
     { name: "Educação Financeira", href: "/educacaofinanceira" },
     { name: "Metodologias", href: "/metodologias" },
-    { name: "Módulo 4", href: "/modulo4" },
+    { name: "Material Didático", href: "/material" },
   ]
 
   return (
