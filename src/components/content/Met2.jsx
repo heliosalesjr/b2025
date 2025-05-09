@@ -11,7 +11,7 @@ const Met2 = () => {
   return (
     <motion.div
       layout
-      className="relative w-full h-[70vh] rounded-lg overflow-hidden shadow-2xl"
+      className="relative w-full h-[70vh] rounded-2xl overflow-hidden shadow-2xl"
       transition={{ duration: 1.2 }}
     >
       {/* Imagem e camada escura */}
