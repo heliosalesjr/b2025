@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar"
 import Hero from "@/components/Hero"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
+import MatContentSection from "@/components/MatContentSection"
 
 export default function Modulo4() {
   return (
@@ -13,7 +14,8 @@ export default function Modulo4() {
                 title="Material Didático"
                 subtitle="Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e a metodologia de aplicação do material"
                 />
-        <h1>Módulo 4</h1>
+        
+        <MatContentSection />
       </main>
       <Footer />
     </div>
