@@ -27,7 +27,7 @@ const SectionCard = ({ icon: Icon, title, children, color = "" }) => (
 
 export default function Mat4() {
   return (
-    <section className="max-w-5xl mx-auto my-16 p-6 bg-gradient-to-br from-emerald-100 to-blue-100 rounded-2xl shadow-2xl pt-16 pb-16">
+    <section className="max-w-5xl mx-auto my-16 p-6 bg-gradient-to-br from-blue-50 to-pink-100 rounded-2xl shadow-2xl pt-16 pb-16">
       <motion.h1
         className="text-center text-3xl md:text-4xl font-bold text-slate-800 mb-8"
         initial={{ opacity: 0 }}
