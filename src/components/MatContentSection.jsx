@@ -6,6 +6,8 @@ import Mat2 from "./content/Mat2"
 import Mat3 from "./content/Mat3"
 import Mat4 from "./content/Mat4"
 import Mat5 from "./content/Mat5"
+import Mat6 from "./content/Mat6"
+import Mat7 from "./content/Mat7"
 
 
 export default function ContentSection() {
@@ -18,7 +20,8 @@ export default function ContentSection() {
           <Mat3 />
           <Mat4 />
           <Mat5 />
-          
+          <Mat6 />
+          <Mat7 />
           <div className="flex justify-center mt-8">
             <Button asChild>
               <Link href="/">Voltar para a home</Link>
