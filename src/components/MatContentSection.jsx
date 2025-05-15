@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import FadeInWhenVisible from "./FadeInWhenVisible"
 import Mat1 from "./content/Mat1"
 import Mat2 from "./content/Mat2"
 import Mat3 from "./content/Mat3"
@@ -17,15 +18,34 @@ export default function ContentSection() {
     <section id="content" className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-5xl space-y-8">
-          <Mat1 />
-          <Mat2 />
-          <Mat3 />
-          <Mat4 />
-          <Mat5 />
-          <Mat6 />
-          <Mat7 />
-          <Mat8 />
-          <Mat9 />
+          <FadeInWhenVisible>
+            <Mat1 />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Mat2 />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Mat3 />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Mat4 />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Mat5 />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Mat6 />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Mat7 />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Mat8 />
+          </FadeInWhenVisible>
+          <FadeInWhenVisible>
+            <Mat9 />
+          </FadeInWhenVisible>
+          
           <div className="flex justify-center mt-8">
             <Button asChild>
               <Link href="/">Voltar para a home</Link>
