@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Met4() {
   return (
-    <div className="bg-white py-16 px-6 flex justify-center rounded-2xl shadow-2xl">
+    <div className="bg-gray-100 py-16 px-6 flex justify-center rounded-2xl shadow-2xl">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
         {/* Coluna Esquerda */}
