@@ -20,17 +20,17 @@ export default function PageApresentacao4() {
   ]
 
   return (
-    <section className="w-full py-6">
+    <section className="w-full py-6 bg-slate-100 rounded-2xl shadow-2xl">
       <div className="container">
         <div className="mx-auto max-w-6xl space-y-6">
           
           {/* Bloco de título estilizado */}
-          <div className="bg-blue-500 p-6 rounded-lg shadow-2xl text-center">
-            <h2 className="text-2xl text-white font-bold text-primary">Estrutura do curso</h2>
-          </div>
+          
+          <h2 className="text-3xl text-slate-800 font-bold text-center">Estrutura do curso</h2>
+          
 
           {/* Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 shadow-2xl px-8">
             {cards.map((card, index) => (
               <div key={index} className="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center">
                 <card.icon className="h-12 w-12 text-primary mb-4" />
