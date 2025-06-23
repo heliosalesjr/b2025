@@ -3,41 +3,55 @@ import { FaGraduationCap, FaCalculator, FaBookOpen, FaChalkboardTeacher } from '
 
 const EF2 = () => {
   return (
-    <div className="bg-white rounded-lg shadow-2xl overflow-hidden p-6 md:p-10">
-      <div className="flex flex-col md:flex-row divide-y md:divide-y-0 ">
-        
-        {/* Bloco 1 */}
-        <div className="md:w-1/4 px-4 md:px-6 pb-4 md:pb-0 flex flex-col items-center text-center md:text-left hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out rounded-lg">
-          <FaGraduationCap className="text-indigo-600 text-3xl mb-4" />
-          <p className="text-slate-700 mb-4 text-sm md:text-base">
-            A Educação Financeira é, portanto, indispensável para preparar o jovem para o futuro, favorecendo sua formação como cidadão e tornando-o mais crítico e preparado para enfrentar os desafios da vida adulta.
+    <div className="max-w-6xl mx-auto p-6 bg-white rounded-xl">
+      <h2 className="text-4xl font-bold text-slate-700 text-center mb-12">
+        Educação Financeira no Ensino Fundamental
+      </h2>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Card 1 */}
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div className="flex items-center mb-4">
+            <FaGraduationCap className="text-4xl text-blue-600 mr-4" />
+            <h3 className="text-xl font-bold text-slate-700">Formação Cidadã</h3>
+          </div>
+          <p className="text-gray-600 leading-relaxed">
+            A Educação Financeira é essencial para preparar os jovens para a vida adulta, promovendo uma formação cidadã mais crítica e consciente diante dos desafios do mundo real.
           </p>
         </div>
 
-        {/* Bloco 2 */}
-        <div className="md:w-1/4 pb-4 px-4 md:px-6 py-6 md:py-0 flex flex-col items-center text-center md:text-left hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out rounded-lg">
-          <FaCalculator className="text-emerald-600 text-3xl mb-4" />
-          <p className="text-slate-700 mb-4 text-sm md:text-base">
-            Além disso, seu conteúdo aplica-se ao cotidiano de todos, dialogando estreitamente com a Matemática, disciplina que cada vez mais procura associar seu conteúdo teórico com a vida prática do estudante.
+        {/* Card 2 */}
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div className="flex items-center mb-4">
+            <FaCalculator className="text-4xl text-green-600 mr-4" />
+            <h3 className="text-xl font-bold text-slate-700">Conteúdo Aplicável e Conectado</h3>
+          </div>
+          <p className="text-gray-600 leading-relaxed">
+            Seu conteúdo dialoga com o cotidiano dos estudantes e está fortemente integrado à Matemática, associando teoria à prática de forma significativa.
           </p>
         </div>
 
-        {/* Bloco 3 */}
-        <div className="md:w-1/4 pb-4 px-4 md:px-6 py-6 md:py-0 flex flex-col items-center text-center md:text-left hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out rounded-lg">
-          <FaBookOpen className="text-rose-600 text-3xl mb-4" />
-          <p className="text-slate-700 mb-4 text-sm md:text-base">
-            A Base Nacional Comum Curricular (BNCC), incluiu a Educação Financeira entre os temas que deverão constar nos currículos de todo o país.
+        {/* Card 3 */}
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div className="flex items-center mb-4">
+            <FaBookOpen className="text-4xl text-purple-600 mr-4" />
+            <h3 className="text-xl font-bold text-slate-700">Presente na BNCC</h3>
+          </div>
+          <p className="text-gray-600 leading-relaxed">
+            A Base Nacional Comum Curricular (BNCC) inclui a Educação Financeira como um tema obrigatório, presente nos currículos escolares de todo o país.
           </p>
         </div>
 
-        {/* Bloco 4 */}
-        <div className="md:w-1/4 pb-4 px-4 md:px-6 pt-6 md:pt-0 flex flex-col items-center text-center md:text-left hover:scale-105 hover:shadow-lg transition duration-300 ease-in-out rounded-lg">
-          <FaChalkboardTeacher className="text-yellow-600 text-3xl mb-4" />
-          <p className="text-slate-700 mb-4 text-sm md:text-base">
-            Mesmo que inserido como um “tema transversal”, é na competência da Matemática que ele é mencionado explicitamente para o 5º, 6º, 7º e 9º anos do Ensino Fundamental.
+        {/* Card 4 */}
+        <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
+          <div className="flex items-center mb-4">
+            <FaChalkboardTeacher className="text-4xl text-orange-600 mr-4" />
+            <h3 className="text-xl font-bold text-slate-700">Foco na Matemática</h3>
+          </div>
+          <p className="text-gray-600 leading-relaxed">
+            Embora seja um tema transversal, a Educação Financeira é tratada com destaque na área de Matemática, especialmente nos 5º, 6º, 7º e 9º anos do Ensino Fundamental.
           </p>
         </div>
-
       </div>
     </div>
   )

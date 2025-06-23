@@ -18,29 +18,31 @@ const Mat1 = () => {
       {/* Seção com 3 blocos */}
       <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-300">
         
-        {/* Bloco 1 */}
-        <div className="md:w-1/3 px-4 md:px-6 pb-6 md:pb-0 flex flex-col items-center text-center md:text-left">
-          <FaUsersCog className="text-indigo-600 text-3xl mb-4" />
-          <p className="text-slate-700 text-sm md:text-base">
-            Essa integração permite que o professor de Matemática convide educadores de outros componentes curriculares, como Português, Ciências, Geografia, entre outros, para trabalhar de forma interdisciplinar.
-          </p>
-        </div>
+      <div className="md:w-1/3 px-4 md:px-6 pb-6 md:pb-0 flex flex-col items-center text-center md:text-left">
+              <FaUsersCog className="text-indigo-600 text-3xl mb-4" />
+              <h3 className="text-slate-700 font-bold text-lg mb-3">Interdisciplinaridade</h3>
+              <p className="text-slate-700 text-sm md:text-base">
+                A proposta incentiva o trabalho interdisciplinar, permitindo que o professor de Matemática colabore com docentes de áreas como Português, Ciências e Geografia.
+              </p>
+            </div>
 
-        {/* Bloco 2 */}
-        <div className="md:w-1/3 px-4 md:px-6 py-6 md:py-0 flex flex-col items-center text-center md:text-left">
-          <FaBookOpen className="text-emerald-600 text-3xl mb-4" />
-          <p className="text-slate-700 text-sm md:text-base">
-            Os capítulos são estruturados em torno de reflexões e questões práticas do cotidiano, que se conectam diretamente à Educação Financeira e aos tópicos de Matemática pertinentes a cada ano escolar.
-          </p>
-        </div>
+            {/* Bloco 2 */}
+            <div className="md:w-1/3 px-4 md:px-6 py-6 md:py-0 flex flex-col items-center text-center md:text-left">
+              <FaBookOpen className="text-emerald-600 text-3xl mb-4" />
+              <h3 className="text-slate-700 font-bold text-lg mb-3">Estrutura dos capítulos</h3>
+              <p className="text-slate-700 text-sm md:text-base">
+                Cada capítulo é construído a partir de reflexões e situações do cotidiano, articulando conteúdos matemáticos ao desenvolvimento da Educação Financeira, conforme o nível escolar.
+              </p>
+            </div>
 
-        {/* Bloco 3 */}
-        <div className="md:w-1/3 px-4 md:px-6 pt-6 md:pt-0 flex flex-col items-center text-center md:text-left">
-          <FaChalkboardTeacher className="text-yellow-500 text-3xl mb-4" />
-          <p className="text-slate-700 text-sm md:text-base">
-            Os exercícios são cuidadosamente alinhados com as reflexões dos capítulos, oferecendo exemplos práticos para que os estudantes possam se basear. Cada aula culmina com uma lição que responde às perguntas: por que discutimos este assunto e por que escolhemos esta abordagem?
-          </p>
-        </div>
+            {/* Bloco 3 */}
+            <div className="md:w-1/3 px-4 md:px-6 pt-6 md:pt-0 flex flex-col items-center text-center md:text-left">
+              <FaChalkboardTeacher className="text-yellow-500 text-3xl mb-4" />
+              <h3 className="text-slate-700 font-bold text-lg mb-3">Exercícios e fechamento</h3>
+              <p className="text-slate-700 text-sm md:text-base">
+                Os exercícios reforçam os temas discutidos em aula por meio de exemplos práticos. Cada lição é finalizada com uma reflexão: <em>por que esse tema é importante?</em> e <em>por que foi abordado dessa forma?</em>
+              </p>
+            </div>
       </div>
 
       {/* Subtítulo + PDF */}
