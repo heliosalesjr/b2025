@@ -4,13 +4,13 @@ import Image from 'next/image'
 const PageApresentacao1 = () => {
   return (
     <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
-      <div className="grid gap-8 md:grid-cols-3 items-center">
+      <div className="grid gap-8 md:grid-cols-3 items-stretch">
         {/* Conteúdo - 2/3 da largura */}
-        <div className="md:col-span-2 space-y-6">
+        <div className="md:col-span-2 space-y-6 flex flex-col justify-center">
           <div className="flex items-center gap-3">
             <div className="w-1 h-12 bg-gradient-to-b from-slate-500 to-blue-500 rounded-full"></div>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-green-700 bg-clip-text text-transparent">
-              APRESENTAÇÃO DO CURSO
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-700 to-green-700 bg-clip-text text-transparent">
+              Apresentação do Curso
             </h2>
           </div>
           
@@ -50,13 +50,12 @@ const PageApresentacao1 = () => {
         </div>
         
         {/* Imagem - 1/3 da largura */}
-        <div className="flex items-center justify-center">
-          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+        <div className="flex items-center justify-center h-full">
+          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 w-full h-full min-h-96">
             <Image
               src="/livros_bei.png"
               alt="Imagem ilustrativa"
-              width={300}
-              height={300}
+              fill
               className="rounded-xl object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>

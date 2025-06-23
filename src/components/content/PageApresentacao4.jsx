@@ -52,12 +52,12 @@ export default function PageApresentacao4() {
   }
 
   return (
-    <section className="w-full rounded-xl bg-gradient-to-br from-blue-50/70 to-slate-300/50 p-8 shadow-2xl border border-slate-100">
+    <section className="w-full rounded-xl bg-gradient-to-br from-blue-50 to-slate-200 p-8 shadow-2xl border border-slate-100">
       <div className="container">
         <div className="mx-auto max-w-6xl space-y-8">
           
           {/* Título estilizado */}
-          <h2 className="text-3xl font-bold text-center bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold text-center bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
             Estrutura do curso
           </h2>
 

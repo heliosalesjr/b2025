@@ -9,7 +9,7 @@ const PageApresentacao2 = () => {
         <div className="flex items-center justify-center">
           <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <Image
-              src="/profa_ilustra.png"
+              src="/teach_intro1.jpg"
               alt="Imagem ilustrativa"
               width={300}
               height={300}
@@ -22,7 +22,7 @@ const PageApresentacao2 = () => {
         <div className="md:col-span-2 space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full"></div>
-            <h2 className="text-4xl text-slate-800 font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
               Autonomia
             </h2>
           </div>
