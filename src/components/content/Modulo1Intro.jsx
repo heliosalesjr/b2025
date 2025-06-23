@@ -21,7 +21,7 @@ const Modulo1Intro = () => {
         <div className="w-full md:w-2/3 space-y-4">
           <h2 className="text-3xl font-bold pt-4 text-slate-900">Módulo 1</h2>
           <p className="text-slate-600">
-            Sejam bem-vindos e bem-vindas ao módulo 1 da nossa formação! Nesse primeiro módulo, queremos começar falando sobre a importância da Educação Financeira para o cotidiano de qualquer pessoa e, assim, a importância de trazer isso para sala de aula.
+            Sejam bem-vindos e bem-vindas ao módulo 1 da nossa formação! Neste primeiro módulo, queremos começar falando sobre a importância da Educação Financeira para o cotidiano de qualquer pessoa e, assim, a importância de trazer isso para sala de aula.
           </p>
           <p className="text-slate-700 text-sm">
             A partir daí, vamos falar sobre a coleção <strong>Aprendendo a lidar com Dinheiro</strong>, criada para tornar o aprendizado de educação financeira em sala de aula mais prático e efetivo.

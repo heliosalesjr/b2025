@@ -1,30 +1,68 @@
 import React from 'react'
 import Image from 'next/image'
+
 const PageApresentacao1 = () => {
   return (
-    <div className="rounded-lg bg-white p-6 shadow-2xl">
-            <div className="grid gap-6 md:grid-cols-2">
-              <div className="space-y-4">
-                <h2 className="text-2xl font-bold pt-4">APRESENTAÇÃO DO CURSO</h2>
-                <p className="text-muted-foreground py-2">
-                Este Curso sobre a aplicação da COLEÇÃO APRENDENDO A LIDAR COM DINHEIRO faz parte das ações de acompanhamento pedagógico realizadas pela BEĨ EDUCAÇÃO aos educadores(as) da Secretaria Estadual de Educação do Estado do Mato Grosso que atuam na disciplina de Matemática com os alunos do 6º ao 8º ano do Ensino Fundamental e da 1ª série do Ensino Médio.
-                </p>
-                <p className="text-slate-800 text-sm py-2">
-                O curso foi desenvolvido pela equipe pedagógica da BEĨ Educação em parceria com a equipe de tecnologia da SEDUC no formato autoinstrucional, ou seja, não conta com a figura de um tutor para interagir ou tirar dúvidas dos participantes.
-
-                </p>
-              </div>
-              <div className="flex items-center justify-center">
-                <Image
-                  src="/livros_bei.png"
-                  alt="Imagem ilustrativa"
-                  width={500}
-                  height={200}
-                  className="rounded-md object-cover"
-                />
-              </div>
+    <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
+      <div className="grid gap-8 md:grid-cols-3 items-center">
+        {/* Conteúdo - 2/3 da largura */}
+        <div className="md:col-span-2 space-y-6">
+          <div className="flex items-center gap-3">
+            <div className="w-1 h-12 bg-gradient-to-b from-slate-500 to-blue-500 rounded-full"></div>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-700 to-green-700 bg-clip-text text-transparent">
+              APRESENTAÇÃO DO CURSO
+            </h2>
+          </div>
+          
+          <p className="text-slate-700 text-lg leading-relaxed">
+            Este curso sobre a aplicação da Coleção{' '}
+            <span className="italic font-semibold text-slate-800">Aprendendo a Lidar com Dinheiro</span>{' '}
+            integra as ações de acompanhamento pedagógico promovidas pela{' '}
+            <span className="font-semibold text-blue-600">BEĨ Educação</span>, voltadas aos educadores 
+            e às educadoras da Secretaria de Estado de Educação de Mato Grosso que lecionam 
+            Matemática para turmas do 6º ao 8º ano do Ensino Fundamental e da 1ª série do Ensino Médio.
+          </p>
+          
+          <p className="text-slate-700 text-lg leading-relaxed">
+            Desenvolvido pela equipe pedagógica da{' '}
+            <span className="font-semibold text-blue-600">BEĨ Educação</span>, em parceria com a 
+            equipe de tecnologia da{' '}
+            <span className="font-semibold text-green-600">SEDUC</span>, o curso é oferecido no 
+            formato <span className="font-semibold text-slate-800">autoinstrucional</span> — ou seja, 
+            sem a presença de tutores para interação ou esclarecimento de dúvidas dos participantes.
+          </p>
+          
+          {/* Elementos visuais adicionais */}
+          <div className="flex gap-4 pt-4">
+            <div className="flex items-center gap-2 text-slate-600">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium">Matemática</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-600">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium">Autoinstrucional</span>
+            </div>
+            <div className="flex items-center gap-2 text-slate-600">
+              <div className="w-2 h-2 bg-slate-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-medium">6º ao 8º ano + 1ª série EM</span>
             </div>
           </div>
+        </div>
+        
+        {/* Imagem - 1/3 da largura */}
+        <div className="flex items-center justify-center">
+          <div className="relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Image
+              src="/livros_bei.png"
+              alt="Imagem ilustrativa"
+              width={300}
+              height={300}
+              className="rounded-xl object-cover hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
