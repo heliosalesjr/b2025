@@ -13,12 +13,12 @@ const objetivos = [
     description: 'Conhecer a coleção Aprendendo a Lidar com Dinheiro.'
   },
   {
-    icon: <FaUsers size={32} className="text-pink-600" />,
+    icon: <FaUsers size={32} className="text-blue-600" />,
     title: 'Diagnóstico da Turma',
     description: 'Aprender a fazer o diagnóstico do perfil da turma.'
   },
   {
-    icon: <FaTools size={32} className="text-yellow-600" />,
+    icon: <FaTools size={32} className="text-green-600" />,
     title: 'Ferramentas de Engajamento',
     description: 'Conhecer ferramentas e atividades para o engajamento dos estudantes.'
   }
@@ -26,17 +26,24 @@ const objetivos = [
 
 const Modulo1Objetivos = () => {
   return (
-    <div className="bg-white rounded-lg shadow-2xl p-6">
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-8">Objetivos do Módulo</h2>
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 mb-4">
+    <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
+      <div className="flex items-center justify-center gap-3 mb-8">
+        <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full"></div>
+        <h2 className="text-4xl font-bold text-center text-slate-700">
+          Objetivos do Módulo
+        </h2>
+        <div className="w-1 h-12 bg-gradient-to-b from-green-500 to-slate-500 rounded-full"></div>
+      </div>
+      
+      <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
         {objetivos.map((obj, index) => (
           <div
             key={index}
-            className="bg-slate-50 hover:bg-slate-100 transition-colors duration-300 rounded-xl shadow-md p-4 flex flex-col items-center text-center border border-slate-200"
+            className="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center "
           >
-            <div className="mb-3">{obj.icon}</div>
-            <h3 className="text-base font-semibold text-slate-800 mb-1">{obj.title}</h3>
-            <p className="text-sm text-slate-600">{obj.description}</p>
+            <div className="mb-4 p-3 rounded-full bg-slate-50">{obj.icon}</div>
+            <h3 className="text-lg font-bold text-slate-800 mb-3">{obj.title}</h3>
+            <p className="text-slate-700 leading-relaxed">{obj.description}</p>
           </div>
         ))}
       </div>

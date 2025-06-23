@@ -5,7 +5,9 @@ import Modulo1Situacao from "./content/Modulo1Situacao"
 import Modulo1Video from "./content/Modulo1Video"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import Modulo1Situacao2 from "./content/Modulo1Situacao2"
+//import Modulo1Midia from "./content/Modulo1Midia"
+//import Modulo1Situacao2 from "./content/Modulo1Situacao2"
+import Modulo1Midia from "./content/Modulo1Midia"
 
 export default function Modulo1ContentSection() {
     return (
@@ -26,7 +28,7 @@ export default function Modulo1ContentSection() {
                 </FadeInWhenVisible>
 
                 <FadeInWhenVisible>
-                  <Modulo1Situacao2 />
+                  <Modulo1Midia />
                 </FadeInWhenVisible>
 
                 <FadeInWhenVisible>

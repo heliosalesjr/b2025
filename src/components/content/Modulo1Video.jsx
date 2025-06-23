@@ -5,9 +5,14 @@ const Modulo1Video = () => {
   return (
     <div className="bg-white rounded-lg shadow-2xl p-6 md:p-10 space-y-8 text-center">
       {/* Título */}
-      <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
-        A Situação Financeira dos Brasileiros
-      </h2>
+      <div className="flex items-center justify-center gap-3 mb-8">
+        <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full"></div>
+          <h2 className="text-2xl md:text-4xl font-bold text-slate-700">
+            A Situação Financeira dos Brasileiros
+          </h2>
+        <div className="w-1 h-12 bg-gradient-to-b from-green-500 to-blue-500 rounded-full"></div>
+      </div>
+      
 
       {/* Vídeo */}
       <div className="relative w-full pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg">
@@ -34,8 +39,8 @@ const Modulo1Video = () => {
           <div className="flex items-center gap-4">
             <FaLink className="text-blue-600 text-2xl" />
             <div>
-              <h4 className="text-lg font-bold text-slate-900">Endividamento Excessivo</h4>
-              <p className="text-slate-600 text-sm">Entenda como o endividamento pode sair do controle e quais são os impactos disso.</p>
+              <h4 className="text-lg font-bold text-slate-900">Riscos do Endividamento Excessivo</h4>
+              <p className="text-slate-600 text-sm">Descubra como o descontrole financeiro pode levar ao endividamento crítico e entenda os impactos sociais e pessoais dessa situação.</p>
             </div>
           </div>
         </a>
@@ -50,8 +55,8 @@ const Modulo1Video = () => {
           <div className="flex items-center gap-4">
             <FaLink className="text-green-600 text-2xl" />
             <div>
-              <h4 className="text-lg font-bold text-slate-900">Endividamento</h4>
-              <p className="text-slate-600 text-sm">Um olhar crítico e direto sobre a realidade financeira das periferias.</p>
+              <h4 className="text-lg font-bold text-slate-900">Realidade do Endividamento nas Periferias</h4>
+              <p className="text-slate-600 text-sm">Uma análise sensível e crítica sobre como a desigualdade econômica influencia o endividamento nas regiões periféricas.</p>
             </div>
           </div>
         </a>
