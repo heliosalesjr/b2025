@@ -13,9 +13,9 @@ const SectionCard = ({ icon: Icon, title, children, color = "" }) => (
     viewport={{ once: true }}
     className="mx-2 md:mx-4"
   >
-    <Card className={`bg-white p-8 rounded-2xl shadow-md border border-emerald-200`}>  
+    <Card className={`bg-white p-8 rounded-2xl shadow-md border border-blue-200`}>  
       <CardHeader className="flex items-center gap-4">
-        <Icon className="w-6 h-6 text-emerald-700" />
+        <Icon className="w-6 h-6 text-blue-700" />
         <CardTitle className="text-xl text-slate-800 font-semibold">{title}</CardTitle>
       </CardHeader>
       <CardContent className="mt-4 text-slate-700 text-justify leading-relaxed space-y-4 font-medium">
@@ -27,9 +27,9 @@ const SectionCard = ({ icon: Icon, title, children, color = "" }) => (
 
 export default function Mat4() {
   return (
-    <section className="max-w-5xl mx-auto my-16 p-6 bg-gradient-to-br from-blue-50 to-pink-100 rounded-2xl shadow-2xl pt-16 pb-16">
+    <section className="max-w-5xl mx-auto my-16 p-6 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl shadow-2xl pt-16 pb-16">
       <motion.h1
-        className="text-center text-3xl md:text-4xl font-bold text-slate-800 mb-8"
+        className="text-center text-3xl md:text-4xl font-bold text-slate-700 mb-8"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}

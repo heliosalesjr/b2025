@@ -8,7 +8,7 @@ const Mat8 = () => {
   return (
     <div className="bg-white rounded-lg shadow-2xl p-6 md:p-10 space-y-8 text-center">
       {/* Título */}
-      <h2 className="text-2xl md:text-3xl font-bold text-slate-900">
+      <h2 className="text-2xl md:text-4xl font-bold text-slate-700">
         Encerrando o Módulo 1
       </h2>
 

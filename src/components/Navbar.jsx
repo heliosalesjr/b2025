@@ -17,6 +17,8 @@ export default function Navbar() {
     { name: "Educação Financeira", href: "/educacaofinanceira" },
     { name: "Metodologias", href: "/metodologias" },
     { name: "Material Didático", href: "/material" },
+    { name: "Diagnóstico", href: "/diagnostico" },
+    
   ]
 
   // Detectar scroll para efeito visual

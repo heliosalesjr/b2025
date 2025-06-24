@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const PageApresentacao1 = () => {
   return (
-    <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
+    <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100 space-y-8">
       <div className="grid gap-8 md:grid-cols-3 items-stretch">
         {/* Conteúdo - 2/3 da largura */}
         <div className="md:col-span-2 space-y-6 flex flex-col justify-center">
@@ -59,6 +59,25 @@ const PageApresentacao1 = () => {
               className="rounded-xl object-cover hover:scale-105 transition-transform duration-300"
             />
           </div>
+        </div>
+      </div>
+
+      {/* Seção do Vídeo */}
+      <div className="space-y-6 items-center">
+        
+         
+          <h3 className="text-3xl font-bold text-slate-700 justify-center text-center py-8">
+            Vídeo de Apresentação
+          </h3>
+       
+        
+        <div className="relative w-full pb-[56.25%] h-0 rounded-lg overflow-hidden shadow-lg">
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/42BVLPl0xw8"
+            title="Resumo Módulo 1"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </div>

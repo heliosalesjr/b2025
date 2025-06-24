@@ -9,8 +9,8 @@ import Mat4 from "./content/Mat4"
 import Mat5 from "./content/Mat5"
 import Mat6 from "./content/Mat6"
 import Mat7 from "./content/Mat7"
-import Mat8 from "./content/Mat8"
-import Mat9 from "./content/Mat9"
+//import Mat8 from "./content/Mat8"
+//import Mat9 from "./content/Mat9"
 
 
 export default function ContentSection() {
@@ -27,9 +27,7 @@ export default function ContentSection() {
           <FadeInWhenVisible>
             <Mat3 />
           </FadeInWhenVisible>
-          <FadeInWhenVisible>
-            <Mat4 />
-          </FadeInWhenVisible>
+          
           <FadeInWhenVisible>
             <Mat5 />
           </FadeInWhenVisible>
@@ -39,16 +37,11 @@ export default function ContentSection() {
           <FadeInWhenVisible>
             <Mat7 />
           </FadeInWhenVisible>
-          <FadeInWhenVisible>
-            <Mat8 />
-          </FadeInWhenVisible>
-          <FadeInWhenVisible>
-            <Mat9 />
-          </FadeInWhenVisible>
+          
           
           <div className="flex justify-center mt-8">
             <Button asChild>
-              <Link href="/">Voltar para a home</Link>
+              <Link href="/diagnostico">Próxima Página: Diagnóstico e Encerramento</Link>
             </Button>
           </div>
         </div>
