@@ -18,35 +18,21 @@ const PageApresentacao1 = () => {
             Este curso sobre a aplicação da Coleção{' '}
             <span className="italic font-semibold text-slate-800">Aprendendo a Lidar com Dinheiro</span>{' '}
             integra as ações de acompanhamento pedagógico promovidas pela{' '}
-            <span className="font-semibold text-blue-600">BEĨ Educação</span>, voltadas aos educadores 
+            <span className="font-semibold">BEĨ Educação</span>, voltadas aos educadores 
             e às educadoras da Secretaria de Estado de Educação de Mato Grosso que lecionam 
             Matemática para turmas do 6º ao 8º ano do Ensino Fundamental e da 1ª série do Ensino Médio.
           </p>
           
           <p className="text-slate-700 text-lg leading-relaxed">
             Desenvolvido pela equipe pedagógica da{' '}
-            <span className="font-semibold text-blue-600">BEĨ Educação</span>, em parceria com a 
+            <span className="font-semibold ">BEĨ Educação</span>, em parceria com a 
             equipe de tecnologia da{' '}
-            <span className="font-semibold text-green-600">SEDUC</span>, o curso é oferecido no 
+            <span className="font-semibold">SEDUC</span>, o curso é oferecido no 
             formato <span className="font-semibold text-slate-800">autoinstrucional</span> — ou seja, 
             sem a presença de tutores para interação ou esclarecimento de dúvidas dos participantes.
           </p>
           
-          {/* Elementos visuais adicionais */}
-          <div className="flex gap-4 pt-4">
-            <div className="flex items-center gap-2 text-slate-600">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Matemática</span>
-            </div>
-            <div className="flex items-center gap-2 text-slate-600">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Autoinstrucional</span>
-            </div>
-            <div className="flex items-center gap-2 text-slate-600">
-              <div className="w-2 h-2 bg-slate-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">6º ao 8º ano + 1ª série EM</span>
-            </div>
-          </div>
+          
         </div>
         
         {/* Imagem - 1/3 da largura */}

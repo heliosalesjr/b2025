@@ -31,25 +31,12 @@ const PageApresentacao2 = () => {
             Você é o <span className="font-semibold text-slate-800">protagonista</span> da sua aprendizagem! 
             Este curso permite que você estude no seu tempo e no seu ritmo, de onde estiver — 
             basta ter acesso à internet. Organize sua rotina e aproveite a liberdade de 
-            aprender com             <span className="font-semibold text-green-600">flexibilidade</span> e 
+            aprender com             <span className="font-semibold ">flexibilidade</span> e 
             foco nos seus objetivos.
           </p>
           
           {/* Elementos visuais adicionais */}
-          <div className="flex gap-4 pt-4">
-            <div className="flex items-center gap-2 text-slate-600">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Flexível</span>
-            </div>
-            <div className="flex items-center gap-2 text-slate-600">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">Online</span>
-            </div>
-            <div className="flex items-center gap-2 text-slate-600">
-              <div className="w-2 h-2 bg-slate-500 rounded-full animate-pulse"></div>
-              <span className="text-sm font-medium">No seu ritmo</span>
-            </div>
-          </div>
+          
         </div>
       </div>
     </div>
