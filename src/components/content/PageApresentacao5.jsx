@@ -5,11 +5,11 @@ export default function CourseStructure() {
     {
       title: "MÓDULO 1 - Como funciona o programa “Aprendendo a lidar com dinheiro” da BEĨ Educação e sua metodologia de aplicação",
       topics: [
-        "A situação e a importância da educação financeira na sala de aula",
-        "Compreendendo o programa da BEĨ Educação e a Aprendizagem Baseada em Projetos",
-        "Conhecendo a estrutura do Livro do Estudante",
-        "Conhecendo a estrutura do Caderno do Educador",
-        "Como iniciar a aplicação do programa, engajar os estudantes e fazer os primeiros registros",
+        "Educação Financeira na sala de aula",
+        "O programa da BEĨ Educação",
+        "O material didático",
+        "Iniciando a aplicação",
+        "Recapitulando",
       ],
     },
     {

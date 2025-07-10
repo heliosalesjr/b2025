@@ -18,9 +18,9 @@ export default function ContentSection() {
     <section id="content" className="w-full py-12 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="mx-auto max-w-5xl space-y-8">
-          <FadeInWhenVisible>
+          
             <Mat1 />
-          </FadeInWhenVisible>
+          
           <FadeInWhenVisible>
             <Mat2 />
           </FadeInWhenVisible>

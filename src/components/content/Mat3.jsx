@@ -63,11 +63,7 @@ const Mat3 = () => {
                 {steps.map((step, index) => (
                   <li
                     key={index}
-                    className={`bg-white p-4 rounded-xl shadow transition-all duration-300 border-l-4 ${
-                      index === 1
-                        ? 'border-blue-500 font-bold text-blue-900'
-                        : 'border-emerald-300'
-                    }`}
+                    className={`bg-white p-4 rounded-xl shadow transition-all duration-300 border-l-4 `}
                   >
                     <span className="font-semibold text-slate-600 mr-2">{index + 1}.</span>
                     {step}

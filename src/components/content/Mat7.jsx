@@ -4,7 +4,7 @@ import { FaVideo, FaBookOpen } from 'react-icons/fa'
 const Mat7 = () => {
   return (
     <div className="bg-white rounded-2xl shadow-2xl overflow-hidden p-6 md:p-10">
-      <h2 className="text-xl md:text-2xl font-bold text-center text-slate-800 mb-8">Saiba Mais</h2>
+      <h2 className="text-xl md:text-3xl font-bold text-center text-slate-700 mb-8">Saiba Mais</h2>
       <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-300">
         {/* Bloco 1 - Vídeo tutorial */}
         <div className="md:w-1/2 px-4 md:px-8 pb-6 md:pb-0 flex flex-col items-center text-center md:text-left">

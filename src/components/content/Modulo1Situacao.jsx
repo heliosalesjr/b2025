@@ -46,9 +46,7 @@ const Modulo1Situacao = () => {
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 A situação e a importância da educação financeira na sala de aula
                 </h2>
-                <p className="text-sm md:text-lg text-slate-100">
-                Investir em educação financeira é crucial, especialmente em um contexto como o do Brasil, onde a população enfrenta desafios significativos relacionados ao endividamento e à falta de planejamento financeiro. De acordo com dados recentes do Serasa, cerca de 74 milhões de brasileiros estavam inadimplentes em dezembro de 2024, o que representa um número alarmante de consumidores com contas em atraso. 
-                </p>
+                
               </div>
             </motion.div>
           </>
@@ -66,6 +64,10 @@ const Modulo1Situacao = () => {
             transition={{ duration: 1.2 }}
           >
             <div className="max-w-3xl">
+
+              <p className="text-base md:text-lg font-medium text-white pb-8">
+                Investir em educação financeira é crucial, especialmente em um contexto como o do Brasil, onde a população enfrenta desafios significativos relacionados ao endividamento e à falta de planejamento financeiro. De acordo com dados recentes do Serasa, cerca de 74 milhões de brasileiros estavam inadimplentes em dezembro de 2024, o que representa um número alarmante de consumidores com contas em atraso. 
+              </p>
               <p className="text-base md:text-lg font-medium text-white">
               Esse cenário reflete não apenas a dificuldade em gerenciar dívidas, mas também a falta de conhecimento sobre práticas financeiras saudáveis, como o orçamento familiar e a importância de poupar para emergências. A educação financeira nas escolas pode desempenhar um papel vital na inversão dessa situação, capacitando os jovens a tomarem decisões financeiras mais informadas e responsáveis.
               </p>

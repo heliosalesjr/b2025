@@ -35,7 +35,7 @@ const PageApresentacao2 = () => {
             foco nos seus objetivos.
           </p>
           
-          {/* Elementos visuais adicionais */}
+         
           
         </div>
       </div>
