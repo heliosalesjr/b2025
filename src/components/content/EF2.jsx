@@ -12,7 +12,7 @@ const EF2 = () => {
         {/* Card 1 */}
         <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center mb-4">
-            <FaGraduationCap className="text-4xl text-blue-600 mr-4" />
+            <FaGraduationCap className="text-4xl text-blue-500 mr-4" />
             <h3 className="text-xl font-bold text-slate-700">Formação Cidadã</h3>
           </div>
           <p className="text-gray-600 leading-relaxed">
@@ -23,7 +23,7 @@ const EF2 = () => {
         {/* Card 2 */}
         <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center mb-4">
-            <FaCalculator className="text-4xl text-green-600 mr-4" />
+            <FaCalculator className="text-4xl text-green-500 mr-4" />
             <h3 className="text-xl font-bold text-slate-700">Conteúdo Aplicável e Conectado</h3>
           </div>
           <p className="text-gray-600 leading-relaxed">
@@ -34,7 +34,7 @@ const EF2 = () => {
         {/* Card 3 */}
         <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center mb-4">
-            <FaBookOpen className="text-4xl text-purple-600 mr-4" />
+            <FaBookOpen className="text-4xl text-red-500 mr-4" />
             <h3 className="text-xl font-bold text-slate-700">Presente na BNCC</h3>
           </div>
           <p className="text-gray-600 leading-relaxed">
@@ -45,7 +45,7 @@ const EF2 = () => {
         {/* Card 4 */}
         <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200 hover:shadow-xl transition-shadow duration-300">
           <div className="flex items-center mb-4">
-            <FaChalkboardTeacher className="text-4xl text-orange-600 mr-4" />
+            <FaChalkboardTeacher className="text-4xl text-yellow-400 mr-4" />
             <h3 className="text-xl font-bold text-slate-700">Foco na Matemática</h3>
           </div>
           <p className="text-gray-600 leading-relaxed">

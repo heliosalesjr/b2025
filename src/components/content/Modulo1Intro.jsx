@@ -27,9 +27,9 @@ const Modulo1Intro = () => {
           </div>
           
           <p className="text-slate-700 text-lg leading-relaxed">
-            Sejam <span className="font-semibold text-blue-600">bem-vindos e bem-vindas</span> ao módulo 1 da nossa formação! 
+            Sejam bem-vindos e bem-vindas ao módulo 1 da nossa formação! 
             Neste primeiro módulo, queremos começar falando sobre a importância da{' '}
-            <span className="font-semibold text-green-600">Educação Financeira</span> para o cotidiano de 
+            Educação Financeira para o cotidiano de 
             qualquer pessoa e, assim, a importância de trazer isso para sala de aula.
           </p>
           
@@ -41,13 +41,13 @@ const Modulo1Intro = () => {
           
           <p className="text-slate-700 leading-relaxed">
             Para isso, nosso primeiro passo é fazer um{' '}
-            <span className="font-semibold text-blue-600">diagnóstico da turma</span> que vamos trabalhar, 
+            <span className="font-semibold">diagnóstico da turma</span> que vamos trabalhar, 
             entendendo como vivem, seus sonhos e como a educação financeira pode fazer parte da realização desses sonhos.
           </p>
           
           <p className="text-slate-700 leading-relaxed">
             Por fim, apresentamos{' '}
-            <span className="font-semibold text-green-600">ferramentas e atividades</span> que podem 
+            <span className="font-semibold ">ferramentas e atividades</span> que podem 
             ajudar a engajar a turma, aproximando-os do tema, uns dos outros e mesmo de você, 
             professor e professora.
           </p>

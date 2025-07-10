@@ -46,11 +46,11 @@ const Modulo1Midia = () => {
   return (
     <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
       <div className="flex items-center justify-center gap-3 mb-8">
-        <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full"></div>
+        
         <h2 className="text-3xl font-bold text-center text-slate-700">
           Educação Financeira na Mídia
         </h2>
-        <div className="w-1 h-12 bg-gradient-to-b from-green-500 to-slate-500 rounded-full"></div>
+        
       </div>
       
       <div className="grid gap-8 md:grid-cols-2">

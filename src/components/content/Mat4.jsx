@@ -65,7 +65,7 @@ export default function Mat4() {
           </ul>
         </SectionCard>
 
-        <SectionCard icon={Lightbulb} title="PARA REFLETIR">
+        <SectionCard icon={Lightbulb} title="Para refletir">
           <p>Como estas informações podem interferir no trabalho de sala de aula?</p>
         </SectionCard>
 
