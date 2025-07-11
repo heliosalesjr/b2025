@@ -13,8 +13,7 @@ export default function Home() {
       <Hero
           title="CURSO DE FORMAÇÃO"
           subtitle="COLEÇÃO APRENDENDO A LIDAR COM DINHEIRO - BEĨ EDUCAÇÃO"
-          buttonText="Comece Agora"
-          buttonHref="#content"
+          
         />
         <ContentSection />
       </main>
