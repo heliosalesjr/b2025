@@ -1,6 +1,11 @@
+"use client";
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 import { Tally4, BookMarked, BarChart } from "lucide-react"
 
+
 export default function PageApresentacao4() {
+
   const cards = [
     {
       icon: Tally4,
@@ -51,8 +56,29 @@ export default function PageApresentacao4() {
     }
   }
 
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('apresentacao-3');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
+
   return (
-    <section className="w-full rounded-xl bg-gradient-to-br from-blue-50 to-slate-200 p-8 shadow-2xl border border-slate-100">
+    <div ref={ref} id="apresentacao-3" className="scroll-mt-20 w-full rounded-xl bg-gradient-to-br from-blue-50 to-slate-200 p-8 shadow-2xl border border-slate-100">
       <div className="container">
         <div className="mx-auto max-w-6xl space-y-8">
           
@@ -86,6 +112,6 @@ export default function PageApresentacao4() {
 
         </div>
       </div>
-    </section>
+    </div>
   )
 }

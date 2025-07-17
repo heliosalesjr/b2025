@@ -1,6 +1,6 @@
-
 import "./globals.css";
-
+import { SidebarProvider } from '@/contexts/SidebarContext';
+import Sidebar from '@/components/Sidebar';
 
 export const metadata = {
   title: "Formações BEI Educação",
@@ -10,10 +10,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        
-      >
-        {children}
+      <body>
+        <SidebarProvider>
+          <div className="relative">
+            <Sidebar />
+            {children}
+          </div>
+        </SidebarProvider>
       </body>
     </html>
   );

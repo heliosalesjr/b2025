@@ -1,3 +1,6 @@
+"use client";
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 
 export default function CourseStructure() {
@@ -36,8 +39,28 @@ export default function CourseStructure() {
     },
   ]
 
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('apresentacao-4');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <section className="w-full">
+    <section ref={ref} id="apresentacao-4" className="w-full scroll-mt-20">
       <div className="container max-w-6xl bg-white p-6 rounded-lg shadow-2xl">
         <h2 className="mb-4 text-3xl text-center font-bold">Módulos</h2>
         <Accordion type="single" collapsible className="w-ful mx-4">

@@ -1,9 +1,34 @@
+"use client";
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
+
 import React from 'react'
 import Image from 'next/image'
 
 const PageApresentacao2 = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('apresentacao-2');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
+    <div ref={ref} id="apresentacao-2" className="scroll-mt-20 rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
       <div className="grid gap-8 md:grid-cols-3 items-center">
         {/* Imagem - 1/3 da largura */}
         <div className="flex items-center justify-center">
