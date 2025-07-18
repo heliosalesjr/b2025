@@ -1,3 +1,7 @@
+"use client";
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
+
 import React from 'react'
 import { FaChalkboardTeacher, FaBookOpen, FaUsers, FaTools } from 'react-icons/fa'
 
@@ -25,8 +29,29 @@ const objetivos = [
 ]
 
 const Modulo1Objetivos = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('modulo-1-objetivos');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
+    <div ref={ref} id="modulo-1-objetivos" className="scroll-mt-20 rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
       <div className="flex items-center justify-center gap-3 mb-8">
         <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full"></div>
         <h2 className="text-4xl font-bold text-center text-slate-700">

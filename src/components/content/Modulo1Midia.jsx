@@ -1,7 +1,32 @@
+"use client";
 import React from 'react'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
+
 import { ExternalLink } from 'lucide-react'
 
 const Modulo1Midia = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('modulo-1-midia');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   const noticias = [
     {
       titulo: "Endividamento das famílias atinge novos patamares",
@@ -44,7 +69,7 @@ const Modulo1Midia = () => {
   const coluna2 = noticias.slice(Math.ceil(noticias.length / 2))
 
   return (
-    <div className="rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
+    <div ref={ref} id="modulo-1-midia" className="scroll-mt-20 rounded-xl bg-gradient-to-br from-white to-slate-50 p-8 shadow-2xl border border-slate-100">
       <div className="flex items-center justify-center gap-3 mb-8">
         
         <h2 className="text-3xl font-bold text-center text-slate-700">

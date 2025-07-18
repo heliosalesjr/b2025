@@ -1,9 +1,35 @@
+"use client";
 import React from 'react'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
+
 import { FaLink } from 'react-icons/fa'
 
 const Modulo1Video = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('modulo-1-video');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
+
   return (
-    <div className="bg-white rounded-lg shadow-2xl p-6 md:p-10 space-y-8 text-center">
+    <div ref={ref} id="modulo-1-video" className="scroll-mt-20 bg-white rounded-lg shadow-2xl p-6 md:p-10 space-y-8 text-center">
       {/* Título */}
       <div className="flex items-center justify-center gap-3 mb-8">
         <div className="w-1 h-12 bg-gradient-to-b from-blue-500 to-green-500 rounded-full"></div>

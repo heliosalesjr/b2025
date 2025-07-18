@@ -1,25 +1,80 @@
 "use client";
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { useSidebar } from '@/contexts/SidebarContext';
 
 const navigation = {
-  'Apresentação': [
-    { id: 'apresentacao-1', title: 'Apresentação do Curso' },
-    { id: 'apresentacao-2', title: 'Autonomia' },
-    { id: 'apresentacao-3', title: 'Estrutura do Curso' },
-    { id: 'apresentacao-4', title: 'Módulos' },
-  ],
+  'Apresentação': {
+    path: '/',
+    components: [
+      { id: 'apresentacao-1', title: 'Apresentação do Curso' },
+      { id: 'apresentacao-2', title: 'Autonomia' },
+      { id: 'apresentacao-3', title: 'Estrutura do Curso' },
+      { id: 'apresentacao-4', title: 'Módulos' },
+    ]
+  },
+  'Módulo 1': {
+    path: '/modulo1',
+    components: [
+      { id: 'modulo-1-intro', title: 'O Módulo 1' },
+      { id: 'modulo-1-objetivos', title: 'Objetivos do Módulo' },
+      { id: 'modulo-1-situacao', title: 'Situação e Importância' },
+        { id: 'modulo-1-midia', title: 'Educação Financeira na Mídia' },
+        { id: 'modulo-1-video', title: 'A situação financeira dos Brasileiros' },
+    ]
+  },
+  'Educação Financeira': {
+    path: '/educacaofinanceira',
+    components: [
+      // Adicione os componentes aqui quando criar
+    ]
+  },
+  'Metodologias': {
+    path: '/metodologias',
+    components: [
+      // Adicione os componentes aqui quando criar
+    ]
+  },
+  'Material Didático': {
+    path: '/material',
+    components: [
+      // Adicione os componentes aqui quando criar
+    ]
+  },
+  'Diagnóstico': {
+    path: '/diagnostico',
+    components: [
+      // Adicione os componentes aqui quando criar
+    ]
+  },
 };
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
   const { isViewed } = useSidebar();
+  const router = useRouter();
 
   const scrollToComponent = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleNavigation = (path, componentId = null) => {
+    if (componentId) {
+      // Se estamos na mesma página, só faz scroll
+      if (window.location.pathname === path) {
+        scrollToComponent(componentId);
+      } else {
+        // Se estamos em página diferente, navega e depois faz scroll
+        router.push(`${path}#${componentId}`);
+      }
+    } else {
+      // Navega para a página
+      router.push(path);
+    }
+    setIsOpen(false);
   };
 
   return (
@@ -40,26 +95,33 @@ export default function Sidebar() {
         <div className="w-64 p-4 pt-16 h-full overflow-y-auto mt-32">
           <h3 className="font-bold text-lg mb-4">Navegação</h3>
           
-          {Object.entries(navigation).map(([page, components]) => (
-            <div key={page} className="mb-4">
-              <h4 className="font-semibold mb-2">{page}</h4>
-              <div className="ml-4 space-y-1">
-                {components.map((component) => (
-                  <button
-                    key={component.id}
-                    onClick={() => {
-                      scrollToComponent(component.id);
-                      setIsOpen(false); // Fecha a sidebar após clicar
-                    }}
-                    className="flex items-center gap-2 text-sm hover:text-blue-600 py-1 w-full text-left transition-colors duration-200"
-                  >
-                    {isViewed(component.id) && (
-                      <span className="text-green-600">✓</span>
-                    )}
-                    {component.title}
-                  </button>
-                ))}
-              </div>
+          {Object.entries(navigation).map(([pageName, pageData]) => (
+            <div key={pageName} className="mb-4">
+              {/* Título da página - clicável */}
+              <button
+                onClick={() => handleNavigation(pageData.path)}
+                className="font-semibold mb-2 hover:text-blue-600 transition-colors duration-200 w-full text-left"
+              >
+                {pageName}
+              </button>
+              
+              {/* Componentes da página */}
+              {pageData.components.length > 0 && (
+                <div className="ml-4 space-y-1">
+                  {pageData.components.map((component) => (
+                    <button
+                      key={component.id}
+                      onClick={() => handleNavigation(pageData.path, component.id)}
+                      className="flex items-center gap-2 text-sm hover:text-blue-600 py-1 w-full text-left transition-colors duration-200"
+                    >
+                      {isViewed(component.id) && (
+                        <span className="text-green-600">✓</span>
+                      )}
+                      {component.title}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
