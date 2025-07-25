@@ -1,5 +1,6 @@
 'use client'
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
+import { useSidebar } from '@/contexts/SidebarContext';
 import confetti from 'canvas-confetti'
 
 const checklistItems = [
@@ -10,6 +11,27 @@ const checklistItems = [
 ]
 
 const Mat9 = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('what');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   const [checkedItems, setCheckedItems] = useState(Array(checklistItems.length).fill(false))
   const allChecked = checkedItems.every(Boolean)
 
@@ -30,7 +52,7 @@ const Mat9 = () => {
   }
 
   return (
-    <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-3xl mx-auto space-y-6">
+    <div ref={ref} id="what" className="scroll-mt-20 bg-white rounded-2xl shadow-2xl p-8 md:p-12 max-w-3xl mx-auto space-y-6">
       <h2 className="text-xl md:text-2xl font-bold text-slate-800 mb-4">
         NESTE MÓDULO EU:
       </h2>

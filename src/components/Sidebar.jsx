@@ -59,7 +59,9 @@ const navigation = {
   'Diagnóstico': {
     path: '/diagnostico',
     components: [
-      // Adicione os componentes aqui quando criar
+      { id: 'mat-4', title: 'Diagnóstico do perfil da turma' },
+       { id: 'mat-8', title: 'Encerramento do Módulo 1' },
+       { id: 'what', title: 'O que aprendi?' },
     ]
   },
 };
@@ -78,15 +80,12 @@ export default function Sidebar() {
 
   const handleNavigation = (path, componentId = null) => {
     if (componentId) {
-      // Se estamos na mesma página, só faz scroll
       if (window.location.pathname === path) {
         scrollToComponent(componentId);
       } else {
-        // Se estamos em página diferente, navega e depois faz scroll
         router.push(`${path}#${componentId}`);
       }
     } else {
-      // Navega para a página
       router.push(path);
     }
     setIsOpen(false);
@@ -94,7 +93,7 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Overlay com fade quando sidebar está aberta */}
+      {/* Overlay */}
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 z-40 transition-opacity duration-300"
@@ -106,21 +105,16 @@ export default function Sidebar() {
       <div className={`fixed left-0 top-0 h-full bg-white shadow-lg z-50 transition-transform duration-300 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}>
-        {/* Conteúdo da sidebar */}
-        <div className="w-64 p-4 pt-16 h-full overflow-y-auto mt-32">
+        <div className="w-64 p-4 pt-16 h-full overflow-y-auto mt-4 pb-32">
           <h3 className="font-bold text-lg mb-4">Navegação</h3>
-          
           {Object.entries(navigation).map(([pageName, pageData]) => (
             <div key={pageName} className="mb-4">
-              {/* Título da página - clicável */}
               <button
                 onClick={() => handleNavigation(pageData.path)}
                 className="font-semibold mb-2 hover:text-blue-600 transition-colors duration-200 w-full text-left"
               >
                 {pageName}
               </button>
-              
-              {/* Componentes da página */}
               {pageData.components.length > 0 && (
                 <div className="ml-4 space-y-1">
                   {pageData.components.map((component) => (
@@ -142,10 +136,18 @@ export default function Sidebar() {
         </div>
       </div>
 
-      {/* Botão para abrir/fechar - centralizado verticalmente */}
+      {/* Botão de abrir/fechar */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed left-0 top-1/2 transform -translate-y-1/2 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-r-lg shadow-lg z-50 transition-all duration-200 hover:scale-105"
+        className={`fixed top-1/2 transform -translate-y-1/2 z-50 transition-all duration-200 hover:scale-105
+          ${isOpen 
+            ? 'left-64' // quando sidebar está aberta
+            : 'left-0'  // quando está fechada
+          }
+          bg-white text-blue-600 border border-blue-600 
+          hover:bg-blue-600 hover:text-white 
+          p-3 rounded-r-lg shadow-lg
+        `}
       >
         {isOpen ? '←' : '→'}
       </button>

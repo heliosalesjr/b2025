@@ -1,4 +1,6 @@
 'use client'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -6,6 +8,8 @@ import { motion } from "framer-motion"
 import { Sparkles, Brain, Users, Lightbulb, NotebookPen, ArchiveRestore, ShieldQuestion } from "lucide-react"
 
 const SectionCard = ({ icon: Icon, title, children, color = "" }) => (
+
+  
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -26,8 +30,29 @@ const SectionCard = ({ icon: Icon, title, children, color = "" }) => (
 )
 
 export default function Mat4() {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('mat-4');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <section className="max-w-5xl mx-auto my-16 p-6 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl shadow-2xl pt-16 pb-16">
+    <div ref={ref} id="mat-4" className="scroll-mt-20 max-w-5xl mx-auto my-16 p-6 bg-gradient-to-br from-blue-50 to-emerald-50 rounded-2xl shadow-2xl pt-16 pb-16">
       <motion.h1
         className="text-center text-3xl md:text-4xl font-bold text-slate-700 mb-8"
         initial={{ opacity: 0 }}
@@ -103,6 +128,6 @@ export default function Mat4() {
           </ul>
         </SectionCard>
       </div>
-    </section>
+    </div>
   )
 }
