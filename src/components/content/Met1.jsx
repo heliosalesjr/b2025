@@ -1,10 +1,36 @@
+"use client";
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
+
 import React from 'react'
 import { FaCheckCircle, FaProjectDiagram, FaSyncAlt, FaGamepad, FaChalkboardTeacher } from 'react-icons/fa'
 
 
 const Met1 = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('met-1');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
+
   return (
-    <div className="bg-gradient-to-b from-white to-sky-200 py-10 px-4 md:px-16 relative overflow-hidden rounded-2xl shadow-2xl">
+    <div ref={ref} id="met-1" className="scroll-mt-20 bg-gradient-to-b from-white to-sky-200 py-10 px-4 md:px-16 relative overflow-hidden rounded-2xl shadow-2xl">
       {/* Título */}
       <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-slate-700 ">
         Metodologias Ativas

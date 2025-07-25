@@ -1,7 +1,31 @@
+"use client";
 import React from 'react'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 import { FaCalculator, FaPiggyBank } from 'react-icons/fa'
 
 const EF3 = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('ef-3');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   const dados = [
     [
       "Área do conhecimento que utiliza fundamentos matemáticos relacionados ao uso do dinheiro.",
@@ -34,7 +58,7 @@ const EF3 = () => {
   ]
 
   return (
-    <div className="bg-white p-6 md:p-10 rounded-2xl shadow-2xl overflow-x-auto">
+    <div ref={ref} id="ef-3" className="scroll-mt-20 bg-white p-6 md:p-10 rounded-2xl shadow-2xl overflow-x-auto">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-slate-800 mb-2">
             Diferenças entre Matemática Financeira e Educação Financeira

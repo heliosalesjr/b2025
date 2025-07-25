@@ -1,9 +1,34 @@
+"use client";
 import React from 'react'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
+
 import { FaGraduationCap, FaCalculator, FaBookOpen, FaChalkboardTeacher } from 'react-icons/fa'
 
 const EF2 = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('ef-2');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white rounded-xl">
+    <div ref={ref} id="ef-2" className="scroll-mt-20 max-w-6xl mx-auto p-6 bg-white rounded-xl">
       <h2 className="text-4xl font-bold text-slate-700 text-center mb-12">
         Educação Financeira no Ensino Fundamental
       </h2>

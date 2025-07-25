@@ -1,6 +1,8 @@
 'use client'
 
 import React from 'react'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 
@@ -10,8 +12,29 @@ import 'swiper/css/autoplay'
 const images = ['fin1.jpg', 'fin2.jpg', 'fin3.jpg']
 
 const EFIntro = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('ef-intro');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className="relative w-full h-[50vh] overflow-hidden rounded-lg">
+    <div ref={ref} id="ef-intro" className="scroll-mt-20 relative w-full h-[50vh] overflow-hidden rounded-lg">
       {/* Texto sobreposto */}
       <div className="absolute bottom-0 left-0 w-full bg-black/60 text-white px-6 py-4 z-10">
         <p className="max-w-4xl mx-auto text-sm md:text-base leading-relaxed text-center">

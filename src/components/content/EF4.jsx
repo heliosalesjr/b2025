@@ -1,9 +1,34 @@
+"use client";
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 import React from 'react'
 import Image from 'next/image'
 
 const EF4 = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('ef-4');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className='bg-white rounded-2xl shadow-2xl p-6 mb-8'>
+
+    <div ref={ref} id="ef-4" className='scroll-mt-20 bg-white rounded-2xl shadow-2xl p-6 mb-8'>
       <div className="relative min-h-[60vh] w-full">
         <Image
           src="/bei_banner.jpeg" // Caminho relativo à pasta /public

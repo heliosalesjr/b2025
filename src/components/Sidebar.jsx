@@ -26,19 +26,34 @@ const navigation = {
   'Educação Financeira': {
     path: '/educacaofinanceira',
     components: [
-      // Adicione os componentes aqui quando criar
+      { id: 'ef-intro', title: 'Introdução' },
+      { id: 'ef-2', title: 'Educação Financeira no Ensino Fundamental' },
+      { id: 'ef-3', title: 'Matemática Financeira vs Educação Financeira' },
+      { id: 'ef-4', title: 'O programa da BEĨ Educação' },
+      { id: 'ef-5', title: 'Mais sobre o programa' },
+       
     ]
   },
   'Metodologias': {
     path: '/metodologias',
     components: [
-      // Adicione os componentes aqui quando criar
+      { id: 'met-1', title: 'Metodologias Ativas' },
+      { id: 'met-2', title: 'Aprendizagem Baseada em Projetos' },
+      { id: 'met-3', title: 'ABP - Resumo' },
+      { id: 'met-4', title: 'Pequenos Projetos Didáticos Ativos' },
+      { id: 'met-5', title: 'Fator de Mobilização' },
+      { id: 'met-6', title: 'Mais sobre mobilização' },
     ]
   },
   'Material Didático': {
     path: '/material',
     components: [
-      // Adicione os componentes aqui quando criar
+      { id: 'mat-1', title: 'Estrutura do Livro do Estudante' },
+      { id: 'mat-2', title: 'Estrutura do Caderno do Educador' },
+      { id: 'mat-3', title: 'Primeiros registros' },
+      { id: 'mat-5', title: 'Diário de Bordo' },
+      { id: 'mat-6', title: 'Padlet' },
+      { id: 'mat-7', title: 'Saiba Mais - Links' },
     ]
   },
   'Diagnóstico': {

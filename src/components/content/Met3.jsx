@@ -1,4 +1,6 @@
 "use client";
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 
 import { motion } from "framer-motion";
 import {
@@ -86,8 +88,29 @@ const item = {
 };
 
 export default function Met3() {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('met-3');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-emerald-50 py-16 px-6 flex flex-col items-center">
+    <div ref={ref} id="met-3" className="scroll-mt-20 bg-gradient-to-br from-blue-50 to-emerald-50 py-16 px-6 flex flex-col items-center">
       <motion.h2
         className="text-4xl font-bold text-center mb-12 text-blue-900"
         initial={{ scale: 0 }}

@@ -1,4 +1,6 @@
 'use client'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 
 import React, { useState } from 'react'
 import Image from 'next/image'
@@ -8,10 +10,32 @@ import { motion, AnimatePresence } from 'framer-motion'
 const Met2 = () => {
   const [expanded, setExpanded] = useState(false)
 
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('met-2');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
+
   return (
     <motion.div
+      ref={ref} id="met-2"
       layout
-      className="relative w-full h-[70vh] rounded-2xl overflow-hidden shadow-2xl"
+      className="scroll-mt-20 relative w-full h-[70vh] rounded-2xl overflow-hidden shadow-2xl"
       transition={{ duration: 1.2 }}
     >
       {/* Imagem e camada escura */}

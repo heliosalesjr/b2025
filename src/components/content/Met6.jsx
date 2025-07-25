@@ -1,9 +1,34 @@
+"use client";
 import React from 'react'
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
+
 import { FaPeopleCarry, FaHandsHelping } from 'react-icons/fa'
 
 const Met6 = () => {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('met-6');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className="bg-white rounded-2xl shadow-2xl overflow-hidden p-6 md:p-10">
+    <div ref={ref} id="met-6" className="scroll-mt-20 bg-white rounded-2xl shadow-2xl overflow-hidden p-6 md:p-10">
       <div className="flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-slate-300">
         {/* Bloco 1 */}
         <div className="md:w-1/2 px-4 md:px-8 pb-6 md:pb-0 flex flex-col items-center text-center md:text-left">

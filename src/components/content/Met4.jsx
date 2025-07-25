@@ -1,10 +1,33 @@
 "use client";
+import { useEffect, useRef } from 'react';
+import { useSidebar } from '@/contexts/SidebarContext';
 
 import Image from "next/image";
 
 export default function Met4() {
+
+  const ref = useRef();
+  const { markAsViewed } = useSidebar();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          markAsViewed('met-4');
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [markAsViewed]);
+
   return (
-    <div className="bg-gray-100 py-16 px-6 flex justify-center rounded-2xl shadow-2xl">
+    <div ref={ref} id="met-4" className="scroll-mt-20 bg-gray-100 py-16 px-6 flex justify-center rounded-2xl shadow-2xl">
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
         {/* Coluna Esquerda */}
