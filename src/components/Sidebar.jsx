@@ -67,7 +67,7 @@ const navigation = {
 };
 
 export default function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const { isViewed } = useSidebar();
   const router = useRouter();
 
