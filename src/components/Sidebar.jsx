@@ -1,5 +1,5 @@
 "use client";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSidebar } from '@/contexts/SidebarContext';
 
@@ -66,10 +66,26 @@ const navigation = {
   },
 };
 
-export default function Sidebar() {
+export default function Sidebar({ forceOpen, onToggle }) {
   const [isOpen, setIsOpen] = useState(false);
   const { isViewed } = useSidebar();
   const router = useRouter();
+
+  // Efeito para controlar a sidebar externamente (pelo tutorial)
+  useEffect(() => {
+    if (forceOpen !== undefined) {
+      setIsOpen(forceOpen);
+    }
+  }, [forceOpen]);
+
+  const toggleSidebar = () => {
+    const newState = !isOpen;
+    setIsOpen(newState);
+    // Notificar o componente pai sobre a mudança
+    if (onToggle) {
+      onToggle(newState);
+    }
+  };
 
   const scrollToComponent = (id) => {
     const element = document.getElementById(id);
@@ -88,7 +104,11 @@ export default function Sidebar() {
     } else {
       router.push(path);
     }
-    setIsOpen(false);
+    
+    // Só fechar a sidebar se não estiver sendo controlada externamente
+    if (forceOpen === undefined) {
+      setIsOpen(false);
+    }
   };
 
   return (
@@ -97,7 +117,12 @@ export default function Sidebar() {
       {isOpen && (
         <div 
           className="fixed inset-0 bg-black/50 z-40 transition-opacity duration-300"
-          onClick={() => setIsOpen(false)}
+          onClick={() => {
+            // Só permitir fechar clicando no overlay se não estiver sendo controlada externamente
+            if (forceOpen === undefined) {
+              setIsOpen(false);
+            }
+          }}
         />
       )}
 
@@ -138,7 +163,7 @@ export default function Sidebar() {
 
       {/* Botão de abrir/fechar */}
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleSidebar}
         className={`fixed top-1/2 transform -translate-y-1/2 z-50 transition-all duration-200 hover:scale-105
           ${isOpen 
             ? 'left-64' // quando sidebar está aberta

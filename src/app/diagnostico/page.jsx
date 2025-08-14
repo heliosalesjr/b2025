@@ -3,7 +3,7 @@ import Hero from "@/components/Hero"
 import Footer from "@/components/Footer"
 import ProgressBar from "@/components/ProgressBar"
 //import EFContentSection from "@/components/EFContentSection"
-import Mat4 from "@/components/content/Mat4"
+//import Mat4 from "@/components/content/Mat4"
 import DiagnosticoContentSection from "@/components/DiagnosticoContentSection"
 
 export default function Diagnostico() {
