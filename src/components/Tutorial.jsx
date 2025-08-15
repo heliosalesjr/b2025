@@ -65,13 +65,15 @@ export default function Tutorial({ onSidebarToggle }) {
       title: "Navegue pelo Curso! 📚",
       description: "Use a barra de navegação superior para acessar diferentes seções do curso. Clique em qualquer item do menu para explorar o conteúdo.",
       highlight: "navbar",
-      position: "top-28 left-1/2 transform -translate-x-1/2"
+      // Desktop: abaixo da navbar, Mobile: centralizado
+      position: "top-28 left-1/2 transform -translate-x-1/2 md:top-28 md:left-1/2 md:transform md:-translate-x-1/2"
     },
     2: {
       title: "Explore os Tópicos! 🎯", 
       description: "Use a barra lateral para navegar pelos tópicos específicos de cada seção. O ícone ✓ indica o que você já visualizou!",
       highlight: "sidebar",
-      position: "top-1/2 left-80 transform -translate-y-1/2"
+      // Desktop: ao lado da sidebar, Mobile: centralizado
+      position: "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:top-1/2 md:left-80 md:transform md:-translate-y-1/2 md:translate-x-0"
     }
   }
 
@@ -190,7 +192,7 @@ export default function Tutorial({ onSidebarToggle }) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, repeat: Infinity, repeatType: "reverse", duration: 1 }}
-              className="absolute -top-3 left-1/2 transform -translate-x-1/2"
+              className="absolute -top-3 left-1/2 transform -translate-x-1/2 md:block hidden"
             >
               <div className="w-0 h-0 border-l-8 border-r-8 border-b-8 border-l-transparent border-r-transparent border-b-white" />
             </motion.div>
@@ -201,7 +203,7 @@ export default function Tutorial({ onSidebarToggle }) {
               initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, repeat: Infinity, repeatType: "reverse", duration: 1 }}
-              className="absolute top-1/2 -left-3 transform -translate-y-1/2"
+              className="absolute top-1/2 -left-3 transform -translate-y-1/2 md:block hidden"
             >
               <div className="w-0 h-0 border-t-8 border-b-8 border-r-8 border-t-transparent border-b-transparent border-r-white" />
             </motion.div>
